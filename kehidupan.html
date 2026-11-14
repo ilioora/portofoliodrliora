@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>dr. Liora Wistara — Beyond Medicine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== KEPALA HALAMAN ===== -->
+  <header class="kepala-utama">
+    <div class="wadah-kepala">
+      <div class="merek">
+        <img alt="Logo dr. Liora" class="logo-merek" src="/images/Elegant Mauve Medical Monogram Logo.png">
+        <div class="info-merek">
+          <span class="nama-dokter">dr. Liora Wistara</span>
+          <span class="profesi-dokter">General Practitioner</span>
+        </div>
+      </div>
+      <div class="aksi-kepala">
+        <a class="tombol-booking-kepala" href="konsultasi.html">
+          <span class="material-symbols-outlined" style="font-size:1rem;">calendar_today</span>
+          <span>Book</span>
+        </a>
+        <div class="foto-profil-kecil">
+          <img alt="Foto profil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_EgM7fad_PUk3PnZMj4z29-uhawSlErWcDBe3NoIDUcXyTgNdxrg3AX5zltIfzghM0itkfwFIXQBZHmr1zg6tKQltMkhRGifx58vggjkACmKfl9ljjhOibF1Tnu4kKWUG_vebp3UYWmK9rT5_3RfsjBEPHaRRMhQmll6rXkdUrncxBEWZS-Br1pcSK7q1HLljOgzHYG5RfaTfGfNJuvx_nwvXja_sxYXnr-1VsF1LV_1qd4czs_yT">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== AREA UTAMA ===== -->
+  <main class="area-utama">
+    <div class="isi-utama">
+
+      <!-- Banner naratif -->
+      <div class="banner-beyond">
+        <div class="lencana-beyond">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">spa</span>
+          <span>Beyond the Stethoscope</span>
+        </div>
+        <h1 class="judul-beyond">Keseimbangan Jiwa, Raga &amp; Kasih</h1>
+        <p class="paragraf-beyond">
+          Di balik jas medis dan diagnosa klinis, terdapat ritme kehidupan yang tenang: desir air di kolam renang fajar dan pelukan hangat sahabat berkaki empat.
+        </p>
+      </div>
+
+      <!-- Tab switch Aquatic / Canine -->
+      <div class="pembungkus-pemilih-vignette">
+        <div class="pemilih-vignette">
+          <button class="tombol-vignette aktif" id="tombol-air" onclick="gantiVignette('air')">
+            <span class="material-symbols-outlined">pool</span>
+            <span>Aquatic &amp; Stamina</span>
+          </button>
+          <button class="tombol-vignette" id="tombol-anjing" onclick="gantiVignette('anjing')">
+            <span class="material-symbols-outlined">pets</span>
+            <span>Canine &amp; Compassion</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- PANEL 1: BERENANG -->
+      <section class="panel-vignette" id="panel-air">
+
+        <div class="kartu-vignette">
+          <div class="bingkai-gambar-vignette">
+            <img alt="Kolam renang infinity tenang menghadap panorama alam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9eiabVOBJN9mdBSMHlCoUz2XHv-FNjTDTD9UEcAfkjpvg83kkIxp21nqVPx3GcfO-n_yQUIX2ohN6HLqwk7W-Oigg8a-UJcSbYaEHGlatBgJ2QTgJdNBzp34wWPcVys7l0ddgjO95HJZ78T6ldf8AuE-R5nQCmoEcg_PX8maSD2im6oubqJxbJMw93vqWyJoc4Sa3VUnRfeIVWtcPkGqPWv2ANoV_RK5REDKAgnQ">
+            <div class="overlay-vignette">
+              <div class="teks-overlay-vignette">
+                <span class="label-overlay">Ritual Fajar</span>
+                <p class="judul-overlay">1,500 Meter Meditasi Aktif</p>
+              </div>
+            </div>
+          </div>
+          <div class="isi-vignette">
+            <div class="kepala-isi-vignette">
+              <span class="material-symbols-outlined">air</span>
+              <span>Disiplin Pernapasan &amp; Endurance</span>
+            </div>
+            <p class="paragraf-vignette">
+              "Bagi seorang dokter umum yang menangani puluhan spektrum klinis setiap hari, ketahanan fisik dan kejernihan pikiran adalah instrumen kerja yang vital. Berenang mengajarkan saya irama pernapasan terkontrol (breathwork) yang menenangkan sistem saraf simpatik."
+            </p>
+            <blockquote class="kutipan-samping">
+              "Di dalam air, kebisingan dunia hening. Setiap kayuhan bukan hanya membakar kalori, melainkan detoksifikasi mental agar saya kembali berempati penuh esok hari."
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Kartu insight medis: kardiovaskular -->
+        <div class="kartu-insight">
+          <div class="kepala-insight">
+            <div class="ikon-insight">
+              <span class="material-symbols-outlined">cardiology</span>
+            </div>
+            <div class="info-insight">
+              <span class="label-insight">Catatan Medis dr. Liora</span>
+              <h2 class="judul-insight">Fisiologi Renang untuk Kardiovaskular</h2>
+            </div>
+          </div>
+
+          <div class="kisi-metrik">
+            <div class="kartu-metrik">
+              <div class="kepala-metrik">
+                <span class="material-symbols-outlined">monitor_heart</span>
+                <span>VO₂ Max</span>
+              </div>
+              <span class="nilai-metrik">+18%</span>
+              <span class="desk-metrik">Optimalisasi ambilan oksigen alveolar</span>
+            </div>
+            <div class="kartu-metrik">
+              <div class="kepala-metrik">
+                <span class="material-symbols-outlined">waves</span>
+                <span>Zero Impact</span>
+              </div>
+              <span class="nilai-metrik">0 G-Force</span>
+              <span class="desk-metrik">Melindungi integritas sendi ligamen</span>
+            </div>
+          </div>
+
+          <ul class="daftar-centang">
+            <li class="item-centang">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span><strong>Dekompresi Spinal:</strong> Daya apung air meniadakan beban kompresi vertebra lumbar setelah berdiri berjam-jam saat tindakan klinis.</span>
+            </li>
+            <li class="item-centang">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span><strong>Regulasi Denyut Nadi Istirahat (RHR):</strong> Menstimulasi tonus vagal parasimpatis sehingga tekanan darah sistolik lebih stabil.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PANEL 2: ANJING (tersembunyi secara default) -->
+      <section class="panel-vignette tersembunyi" id="panel-anjing">
+
+        <div class="kartu-vignette">
+          <div class="bingkai-gambar-vignette">
+            <img alt="Golden Retriever berlari ceria di taman hijau" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCKJ5pP0lt1TDCaeoj63cfvzamtF51JSZoS3x7D6014JUfpXOX4V_O1dNAZIwWOeQ-hOpA-D1krd7M31Qz-Oe1lRNdmxcidRY6CbgExMGYI-SokOnOESenRXN6B9EmyGv43u-8iszkUR9A0UOQuraQ6D4ZUgrAr3mG1TOxGR4AYhsIlEqdAGH1ZlF1VBX6Ox61xNiirrdRhdOLlmMlo5JxyGFpf3SGoqeizLe4YOg">
+            <div class="overlay-vignette">
+              <div class="teks-overlay-vignette">
+                <span class="label-overlay tersier">Keluarga &amp; Sahabat Setia</span>
+                <p class="judul-overlay">Bimbim &amp; Spirit Rescue</p>
+              </div>
+            </div>
+          </div>
+          <div class="isi-vignette">
+            <div class="kepala-isi-vignette tersier">
+              <span class="material-symbols-outlined">favorite</span>
+              <span>Empati Non-Verbal &amp; Animal Welfare</span>
+            </div>
+            <p class="paragraf-vignette">
+              "Hewan tidak bisa mengatakan di mana rasa sakit mereka. Merawat anjing asuhan dan aktif mendampingi shelter rescue melatih kepekaan diagnostik saya: membaca bahasa tubuh, tatapan mata, dan desah napas—kemampuan non-verbal yang sangat krusial saat menangani pasien yang cemas atau anak-anak."
+            </p>
+            <div class="daftar-tag-panel">
+              <span class="tag-panel">
+                <span class="material-symbols-outlined">shield</span> Shelter Volunteer
+              </span>
+              <span class="tag-panel">
+                <span class="material-symbols-outlined">volunteer_activism</span> Foster Parent
+              </span>
+              <span class="tag-panel">
+                <span class="material-symbols-outlined">mood</span> Pet Therapy Advocate
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu insight neurologis -->
+        <div class="kartu-insight">
+          <div class="kepala-insight">
+            <div class="ikon-insight tersier">
+              <span class="material-symbols-outlined">psychology</span>
+            </div>
+            <div class="info-insight">
+              <span class="label-insight tersier">Perspektif Neurologis &amp; Holistik</span>
+              <h2 class="judul-insight">Biokimia Kasih Sayang Hewan</h2>
+            </div>
+          </div>
+
+          <div class="bio-kimia">
+            <div class="kartu-manfaat">
+              <div class="lingkaran-manfaat sekunder">
+                <span class="material-symbols-outlined">sentiment_satisfied</span>
+              </div>
+              <div class="isi-manfaat">
+                <div class="kepala-manfaat">
+                  <span class="label-manfaat">Lonjakan Oksitosin Alami</span>
+                  <span class="nilai-manfaat">+300%</span>
+                </div>
+                <p class="desk-manfaat">Interaksi mata dan membelai bulu anjing memicu sekresi hormon cinta (oksitosin), menekan sekresi kortisol secara signifikan dalam kurun waktu 15 menit.</p>
+              </div>
+            </div>
+
+            <div class="kartu-manfaat">
+              <div class="lingkaran-manfaat tersier">
+                <span class="material-symbols-outlined">speed</span>
+              </div>
+              <div class="isi-manfaat">
+                <div class="kepala-manfaat">
+                  <span class="label-manfaat">Stabilisasi Tekanan Darah</span>
+                  <span class="nilai-manfaat tersier">-10 mmHg</span>
+                </div>
+                <p class="desk-manfaat">Aktivitas jalan santai rutin bersama hewan menstimulasi vasodilatasi kapiler perifer serta mencegah kekakuan arteri dinding pembuluh darah.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kartu rutinitas mingguan -->
+      <div class="pembungkus-rutinitas">
+        <div class="kartu-rutinitas">
+          <div class="kepala-rutinitas">
+            <div class="judul-rutinitas">
+              <span class="material-symbols-outlined">calendar_today</span>
+              <span>Rutinitas Mingguan dr. Liora</span>
+            </div>
+            <span class="label-live">Live Rhythm</span>
+          </div>
+          <p class="desk-rutinitas">Harmoni antara praktek medis dan relaksasi pribadi yang membentuk performa konsultasi optimal:</p>
+
+          <div class="kisi-rutinitas">
+            <div class="kartu-hari">
+              <span class="label-hari sekunder">SEL &amp; KAM</span>
+              <span class="material-symbols-outlined">pool</span>
+              <span class="nama-aktivitas">Dawn Lap</span>
+              <span class="waktu-aktivitas">05:30 - 06:45</span>
+            </div>
+            <div class="kartu-hari">
+              <span class="label-hari tersier">SABTU</span>
+              <span class="material-symbols-outlined">pets</span>
+              <span class="nama-aktivitas">Dog Walk &amp; Park</span>
+              <span class="waktu-aktivitas">07:00 - 08:30</span>
+            </div>
+            <div class="kartu-hari">
+              <span class="label-hari">MINGGU</span>
+              <span class="material-symbols-outlined">volunteer_activism</span>
+              <span class="nama-aktivitas">Shelter Visit</span>
+              <span class="waktu-aktivitas">10:00 - 12:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA filosofi penutup -->
+      <div class="pembungkus-cta-filosofi">
+        <div class="cta-filosofi">
+          <div class="aura-cta"></div>
+          <div class="kepala-cta-filosofi">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <span>Filosofi Praktik Sehat</span>
+          </div>
+          <p class="teks-cta-filosofi">
+            "Kesehatan yang utuh bukan sekadar ketiadaan penyakit, melainkan kemampuan menikmati hidup, bergerak bebas, dan memiliki cinta untuk dibagikan."
+          </p>
+          <div class="kaki-cta-filosofi">
+            <div class="kredit-cta-filosofi">
+              <span class="nama-cta-filosofi">dr. Liora Wistara</span>
+              <span class="peran-cta-filosofi">General Practitioner &amp; Wellness Advocate</span>
+            </div>
+            <a class="tombol-cta-filosofi" href="konsultasi.html">
+              <span class="material-symbols-outlined">chat</span>
+              <span>Konsultasi</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== NAVIGASI BAWAH ===== -->
+  <nav class="navigasi-bawah">
+    <div class="daftar-navbawah">
+      <a class="tautan-navbawah" href="index.html">
+        <span class="material-symbols-outlined">medical_services</span>
+        <span>Overview</span>
+      </a>
+      <a class="tautan-navbawah" href="perjalanan.html">
+        <span class="material-symbols-outlined">history_edu</span>
+        <span>Journey</span>
+      </a>
+      <a class="tautan-navbawah" href="praktik.html">
+        <span class="material-symbols-outlined">ecg_heart</span>
+        <span>Practice</span>
+      </a>
+      <a class="tautan-navbawah aktif" href="kehidupan.html">
+        <span class="material-symbols-outlined">pool</span>
+        <span>Beyond</span>
+      </a>
+      <a class="tautan-navbawah" href="konsultasi.html">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span>Consult</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== SKRIP ===== -->
+  <script>
+    function gantiVignette(jenis) {
+      const panelAir = document.getElementById('panel-air');
+      const panelAnjing = document.getElementById('panel-anjing');
+      const tombolAir = document.getElementById('tombol-air');
+      const tombolAnjing = document.getElementById('tombol-anjing');
+
+      if (jenis === 'air') {
+        panelAir.classList.remove('tersembunyi');
+        panelAnjing.classList.add('tersembunyi');
+        tombolAir.classList.add('aktif');
+        tombolAnjing.classList.remove('aktif');
+      } else {
+        panelAir.classList.add('tersembunyi');
+        panelAnjing.classList.remove('tersembunyi');
+        tombolAnjing.classList.add('aktif');
+        tombolAir.classList.remove('aktif');
+      }
+    }
+  </script>
+
+</body>
+</html>

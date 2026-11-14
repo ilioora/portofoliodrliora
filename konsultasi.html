@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>dr. Liora Wistara — Consultation Booking</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== KEPALA HALAMAN (varian dengan tombol back) ===== -->
+  <header class="kepala-utama kepala-konsultasi">
+    <div class="wadah-kepala">
+      <div class="grup-kiri-konsultasi">
+        <button aria-label="Kembali" class="tombol-kembali" onclick="history.back()">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <img alt="Logo dr. Liora" class="logo-konsultasi" src="/images/Elegant Mauve Medical Monogram Logo.png">
+        <h1 class="judul-kepala-konsultasi">Consultation Booking</h1>
+      </div>
+      <div class="aksi-kepala">
+        <div class="foto-profil-kecil">
+          <img alt="Foto profil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_EgM7fad_PUk3PnZMj4z29-uhawSlErWcDBe3NoIDUcXyTgNdxrg3AX5zltIfzghM0itkfwFIXQBZHmr1zg6tKQltMkhRGifx58vggjkACmKfl9ljjhOibF1Tnu4kKWUG_vebp3UYWmK9rT5_3RfsjBEPHaRRMhQmll6rXkdUrncxBEWZS-Br1pcSK7q1HLljOgzHYG5RfaTfGfNJuvx_nwvXja_sxYXnr-1VsF1LV_1qd4czs_yT">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== AREA UTAMA ===== -->
+  <main class="area-utama">
+    <div class="isi-utama">
+
+      <!-- Banner catatan editorial -->
+      <div class="banner-konsultasi">
+        <div class="kartu-banner-konsultasi">
+          <div class="aura-banner"></div>
+          <div class="label-banner">
+            <span class="titik-label-banner"></span>
+            <span>Layanan Konsultasi Medis</span>
+          </div>
+          <h2 class="judul-banner-konsultasi">
+            Kesehatan Anda, <em>Prioritas Utama Kami.</em>
+          </h2>
+          <p class="desk-banner-konsultasi">
+            Pendekatan medis humanis yang menyatukan diagnosis presisi, perhatian personal, serta arahan gaya hidup berkelanjutan.
+          </p>
+          <div class="kaki-banner">
+            <div class="status-ketersediaan">
+              <span class="titik-hijau"></span>
+              <span class="label-tersedia">Jadwal Minggu Ini Terbuka</span>
+            </div>
+            <span class="label-slot">Slot Terbatas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Baris kontak cepat -->
+      <div class="baris-kontak-cepat">
+        <div class="kisi-kontak-cepat">
+          <a class="tautan-cepat" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+            <div class="ikon-cepat">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <div class="isi-cepat">
+              <span class="label-cepat">WhatsApp Langsung</span>
+              <span class="nilai-cepat">+62 812-3456-7890</span>
+            </div>
+          </a>
+          <a class="tautan-cepat" href="mailto:dr.liorawistara@gmail.com">
+            <div class="ikon-cepat">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <div class="isi-cepat">
+              <span class="label-cepat">Email Resmi</span>
+              <span class="nilai-cepat">dr.liorawistara</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modul reservasi janji temu -->
+      <div class="pembungkus-reservasi">
+        <div class="modul-reservasi">
+          <div class="kepala-modul">
+            <div>
+              <span class="label-modul">Reservasi Janji Temu</span>
+              <h3 class="judul-modul">Pilih Kebutuhan Medis</h3>
+            </div>
+            <div class="ikon-modul">
+              <span class="material-symbols-outlined">calendar_today</span>
+            </div>
+          </div>
+
+          <!-- Kartu pilihan topik -->
+          <div class="daftar-topik" id="pemilih-topik">
+            <div class="kartu-topik terpilih" data-nilai="Konsultasi Umum">
+              <div class="grup-ikon-topik">
+                <div class="ikon-topik">
+                  <span class="material-symbols-outlined">stethoscope</span>
+                </div>
+                <div class="isi-topik">
+                  <span class="judul-topik">Konsultasi Umum</span>
+                  <span class="desk-topik">Keluhan umum, resep &amp; rujukan spesifik</span>
+                </div>
+              </div>
+              <div class="indikator-radio">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+            </div>
+
+            <div class="kartu-topik" data-nilai="Medical Check-up Review">
+              <div class="grup-ikon-topik">
+                <div class="ikon-topik">
+                  <span class="material-symbols-outlined">lab_profile</span>
+                </div>
+                <div class="isi-topik">
+                  <span class="judul-topik">MCU &amp; Lab Review</span>
+                  <span class="desk-topik">Analisis hasil darah, metabolik &amp; radiologi</span>
+                </div>
+              </div>
+              <div class="indikator-radio">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+            </div>
+
+            <div class="kartu-topik" data-nilai="Edukasi Gaya Hidup Sehat">
+              <div class="grup-ikon-topik">
+                <div class="ikon-topik">
+                  <span class="material-symbols-outlined">favorite</span>
+                </div>
+                <div class="isi-topik">
+                  <span class="judul-topik">Edukasi Gaya Hidup</span>
+                  <span class="desk-topik">Pola makan, manajemen stres &amp; kebugaran</span>
+                </div>
+              </div>
+              <div class="indikator-radio">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+            </div>
+
+            <div class="kartu-topik" data-nilai="Pembicara Seminar">
+              <div class="grup-ikon-topik">
+                <div class="ikon-topik">
+                  <span class="material-symbols-outlined">record_voice_over</span>
+                </div>
+                <div class="isi-topik">
+                  <span class="judul-topik">Pembicara / Seminar</span>
+                  <span class="desk-topik">Workshop korporat &amp; seminar kesehatan publik</span>
+                </div>
+              </div>
+              <div class="indikator-radio">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toggle mode -->
+          <div class="pemilih-mode">
+            <button class="tombol-mode aktif" id="mode-klinik" type="button">
+              <span class="material-symbols-outlined">apartment</span>
+              <span>Praktik Klinik</span>
+            </button>
+            <button class="tombol-mode" id="mode-telemed" type="button">
+              <span class="material-symbols-outlined">videocam</span>
+              <span>Telekonsultasi</span>
+            </button>
+          </div>
+
+          <div class="kaki-modul">
+            <div class="info-durasi">
+              <span class="label-durasi">Durasi Sesi</span>
+              <span class="nilai-durasi">30 - 45 Menit</span>
+            </div>
+            <a class="tombol-pilih-jadwal" id="tombol-booking-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+              <span>Pilih Jadwal</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jadwal praktik -->
+      <div class="pembungkus-jadwal">
+        <div class="kartu-jadwal">
+          <div class="kepala-jadwal">
+            <div class="judul-jadwal">
+              <span class="material-symbols-outlined">schedule</span>
+              <span>Jadwal Praktik &amp; Konsultasi</span>
+            </div>
+            <span class="label-zona">WIB (GMT+7)</span>
+          </div>
+
+          <div class="daftar-jadwal">
+            <!-- Klinik -->
+            <div class="baris-jadwal">
+              <div class="info-jadwal">
+                <div class="judul-tempat">
+                  <span class="nama-tempat">Klinik Medika Utama</span>
+                  <span class="pil-tempat">Tatap Muka</span>
+                </div>
+                <p class="hari-jadwal">Senin, Rabu &amp; Jumat</p>
+              </div>
+              <div class="jam-jadwal">
+                <span>16.00 – 20.30</span>
+                <p class="sub-jam">Ruang 204</p>
+              </div>
+            </div>
+
+            <!-- Telekonsultasi -->
+            <div class="baris-jadwal">
+              <div class="info-jadwal">
+                <div class="judul-tempat">
+                  <span class="nama-tempat">Telekonsultasi Privat</span>
+                  <span class="pil-tempat sekunder">Virtual</span>
+                </div>
+                <p class="hari-jadwal">Selasa &amp; Kamis</p>
+              </div>
+              <div class="jam-jadwal">
+                <span>19.00 – 21.30</span>
+                <p class="sub-jam">Google Meet / WA Video</p>
+              </div>
+            </div>
+
+            <!-- Sabtu -->
+            <div class="baris-jadwal">
+              <div class="info-jadwal">
+                <div class="judul-tempat">
+                  <span class="nama-tempat">Sabtu Edukasi &amp; Sesi Pagi</span>
+                  <span class="pil-tempat tersier">Khusus</span>
+                </div>
+                <p class="hari-jadwal">Sabtu (Sesuai Konfirmasi)</p>
+              </div>
+              <div class="jam-jadwal">
+                <span>09.00 – 13.00</span>
+                <p class="sub-jam netral">Reservasi H-1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lokasi & peta -->
+      <div class="pembungkus-lokasi">
+        <div class="kartu-lokasi">
+          <div class="kepala-lokasi">
+            <div class="judul-lokasi">
+              <span class="label-lokasi">Lokasi Praktik</span>
+              <h3 class="nama-lokasi">Klinik Medika Utama Menteng</h3>
+            </div>
+            <a class="tombol-peta" href="https://maps.google.com" target="_blank" rel="noopener" aria-label="Buka peta">
+              <span class="material-symbols-outlined">near_me</span>
+            </a>
+          </div>
+          <p class="alamat-lokasi">
+            Jl. Teuku Cik Ditiro No. 42, Menteng, Jakarta Pusat, DKI Jakarta 10310
+          </p>
+
+          <div class="peta-statis">
+            <div class="label-peta">
+              <span class="material-symbols-outlined">location_on</span>
+              <span>Lantai 2, Ruang Konsultasi 204</span>
+            </div>
+          </div>
+
+          <div class="info-tambahan-lokasi">
+            <span class="item-info-lokasi">
+              <span class="material-symbols-outlined">local_parking</span>
+              Parkir valet &amp; reguler tersedia
+            </span>
+            <span class="item-info-lokasi">
+              <span class="material-symbols-outlined">accessible</span>
+              Akses ramah difabel
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulir pesan instan -->
+      <div class="pembungkus-formulir-pesan">
+        <div class="kartu-formulir-pesan">
+          <div class="kepala-formulir-pesan">
+            <span class="label-modul">Pesan Personal</span>
+            <h3 class="judul-formulir-pesan">Kirimkan Pertanyaan Anda</h3>
+            <p class="desk-formulir-pesan">
+              dr. Liora membaca langsung setiap pesan yang masuk untuk menjaga keintiman komunikasi dokter-pasien.
+            </p>
+          </div>
+
+          <form id="formulir-pesan">
+            <div class="baris-isian">
+              <label class="label-isian" for="nama-pengirim">Nama Lengkap</label>
+              <div class="wadah-isian-ikon">
+                <span class="material-symbols-outlined ikon-isian">person</span>
+                <input class="masukan-pesan" id="nama-pengirim" type="text" placeholder="mis. Sarah Anindita" required>
+              </div>
+            </div>
+
+            <div class="baris-isian">
+              <label class="label-isian" for="email-pengirim">Alamat Email Aktif</label>
+              <div class="wadah-isian-ikon">
+                <span class="material-symbols-outlined ikon-isian">mail</span>
+                <input class="masukan-pesan" id="email-pengirim" type="email" placeholder="sarah.anindita@example.com" required>
+              </div>
+            </div>
+
+            <div class="baris-isian">
+              <label class="label-isian" for="pesan-pengirim">Kebutuhan atau Pertanyaan</label>
+              <textarea class="area-pesan" id="pesan-pengirim" rows="3" placeholder="Ceritakan ringkas keluhan kesehatan, tujuan konsultasi, atau undangan seminar..." required></textarea>
+            </div>
+
+            <button class="tombol-kirim-pesan" id="tombol-kirim-pesan" type="submit">
+              <span>Kirim Pesan ke Dokter</span>
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+
+          <!-- Pesan sukses -->
+          <div class="pesan-sukses" id="pesan-sukses">
+            <span class="material-symbols-outlined">task_alt</span>
+            <div class="isi-pesan-sukses">
+              <p class="judul-sukses">Pesan Berhasil Terkirim</p>
+              <p class="desk-sukses">Terima kasih. dr. Liora atau tim asisten medis akan membalas via email dalam 1x24 jam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media sosial -->
+      <div class="pembungkus-sosial">
+        <div class="kartu-sosial">
+          <h3 class="judul-sosial">Koneksi Profesional &amp; Edukasi</h3>
+          <p class="desk-sosial">
+            Ikuti catatan harian seputar kesehatan preventif, renang perairan terbuka, dan gaya hidup aktif.
+          </p>
+          <div class="kisi-sosial">
+            <a class="tautan-sosial" href="https://instagram.com/dr.liorawistara" target="_blank" rel="noopener">
+              <div class="ikon-sosial">
+                <span class="material-symbols-outlined">photo_camera</span>
+              </div>
+              <div class="isi-sosial">
+                <span class="nama-sosial">@dr.liorawistara</span>
+                <span class="keterangan-sosial">Instagram Edukasi</span>
+              </div>
+            </a>
+            <a class="tautan-sosial" href="https://linkedin.com" target="_blank" rel="noopener">
+              <div class="ikon-sosial">
+                <span class="material-symbols-outlined">work</span>
+              </div>
+              <div class="isi-sosial">
+                <span class="nama-sosial">dr. Liora Wistara</span>
+                <span class="keterangan-sosial">Profil LinkedIn</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ singkat -->
+      <div class="pembungkus-faq">
+        <div class="kepala-faq">
+          <div>
+            <span class="label-faq">Tanya Jawab</span>
+            <h3 class="judul-faq">Pertanyaan Umum</h3>
+          </div>
+        </div>
+
+        <div class="daftar-faq" id="daftar-faq">
+          <div class="item-faq">
+            <div class="kepala-item-faq">
+              <h4 class="pertanyaan-faq">Apa saja yang perlu disiapkan sebelum konsultasi?</h4>
+              <span class="material-symbols-outlined ikon-faq">expand_more</span>
+            </div>
+            <div class="jawaban-faq">
+              Mohon siapkan riwayat penyakit terdahulu, daftar obat atau suplemen yang sedang dikonsumsi, serta berkas hasil tes laboratorium atau rontgen terakhir (jika ada) untuk mempermudah evaluasi komprehensif.
+            </div>
+          </div>
+
+          <div class="item-faq">
+            <div class="kepala-item-faq">
+              <h4 class="pertanyaan-faq">Apakah telekonsultasi mencakup peresepan obat resmi?</h4>
+              <span class="material-symbols-outlined ikon-faq">expand_more</span>
+            </div>
+            <div class="jawaban-faq">
+              Ya. Untuk kondisi medis non-kegawatdaruratan, resep elektronik terverifikasi dengan SIP dokter aktif dapat diterbitkan dan dikirimkan langsung ke apotek mitra berlisensi terdekat dari kediaman Anda.
+            </div>
+          </div>
+
+          <div class="item-faq">
+            <div class="kepala-item-faq">
+              <h4 class="pertanyaan-faq">Bagaimana kebijakan pembatalan atau ubah jadwal?</h4>
+              <span class="material-symbols-outlined ikon-faq">expand_more</span>
+            </div>
+            <div class="jawaban-faq">
+              Anda dapat mengubah jadwal temu bebas biaya maksimal 4 jam sebelum waktu sesi konsultasi dengan menghubungi narahubung WhatsApp kami.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartu penutup editorial -->
+      <div class="pembungkus-penutup-konsultasi">
+        <div class="kartu-penutup-konsultasi">
+          <div class="lingkaran-penutup">
+            <span class="material-symbols-outlined">verified_user</span>
+          </div>
+          <div class="isi-penutup-konsultasi">
+            <p class="nama-penutup">dr. Liora Wistara La'lang Bandaso</p>
+            <p class="sip-penutup">SIP: 31.71.01.2023.00492 | IDI Jakarta Pusat</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== SKRIP ===== -->
+  <script>
+    /* ---------- 1. Pemilihan topik + update link WhatsApp ---------- */
+    let topikTerpilih = "Konsultasi Umum";
+    let modeTerpilih = "Praktik Klinik";
+
+    function perbaruiTautanBooking() {
+      const tombol = document.getElementById('tombol-booking-wa');
+      if (!tombol) return;
+      const pesan = `Halo dr. Liora, saya ingin reservasi janji temu ${topikTerpilih} (${modeTerpilih}).`;
+      tombol.href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(pesan);
+    }
+
+    document.querySelectorAll('#pemilih-topik .kartu-topik').forEach(kartu => {
+      kartu.addEventListener('click', () => {
+        document.querySelectorAll('#pemilih-topik .kartu-topik').forEach(k => k.classList.remove('terpilih'));
+        kartu.classList.add('terpilih');
+        topikTerpilih = kartu.getAttribute('data-nilai') || 'Konsultasi Umum';
+        perbaruiTautanBooking();
+      });
+    });
+
+    /* ---------- 2. Toggle mode klinik / telemed ---------- */
+    const modeKlinik = document.getElementById('mode-klinik');
+    const modeTelemed = document.getElementById('mode-telemed');
+
+    modeKlinik.addEventListener('click', () => {
+      modeKlinik.classList.add('aktif');
+      modeTelemed.classList.remove('aktif');
+      modeTerpilih = 'Praktik Klinik';
+      perbaruiTautanBooking();
+    });
+
+    modeTelemed.addEventListener('click', () => {
+      modeTelemed.classList.add('aktif');
+      modeKlinik.classList.remove('aktif');
+      modeTerpilih = 'Telekonsultasi';
+      perbaruiTautanBooking();
+    });
+
+    /* ---------- 3. FAQ Accordion ---------- */
+    document.querySelectorAll('#daftar-faq .item-faq').forEach(item => {
+      item.addEventListener('click', () => {
+        const sudahTerbuka = item.classList.contains('terbuka');
+        document.querySelectorAll('#daftar-faq .item-faq').forEach(i => i.classList.remove('terbuka'));
+        if (!sudahTerbuka) item.classList.add('terbuka');
+      });
+    });
+
+    /* ---------- 4. Submit formulir + pesan sukses ---------- */
+    const formulirPesan = document.getElementById('formulir-pesan');
+    const tombolKirim = document.getElementById('tombol-kirim-pesan');
+    const pesanSukses = document.getElementById('pesan-sukses');
+
+    formulirPesan.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const teksAsli = tombolKirim.innerHTML;
+      tombolKirim.innerHTML = '<span class="material-symbols-outlined">progress_activity</span> Mengirimkan...';
+      tombolKirim.disabled = true;
+
+      setTimeout(() => {
+        formulirPesan.classList.add('formulir-pesan-tersembunyi');
+        pesanSukses.classList.add('tampil');
+      }, 850);
+    });
+  </script>
+
+</body>
+</html>
